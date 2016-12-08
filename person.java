@@ -1,4 +1,7 @@
 //person.java
+/**This is an instantiable person class.
+ @author Amy McKenna
+ */
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,6 +15,8 @@ public class person {
 	private String PhoneNo;
 	private String email;
 	
+/** single argument constructor method
+	 */
 	
 	public person(){
 	setForename("unknown");
@@ -63,6 +68,9 @@ public class person {
 	}
 	
 	//accessor mehods
+	/** acessor methods to return the person surname, forename, address, date of birth, email
+	 *@return the surname, forename, address, date of birth, email of the person */
+
 	public String getForename(){
 		return this.forename;
 	}
@@ -96,6 +104,10 @@ public class person {
 	}
 	
 	//toString() method
+	/** toString method to return the persons details
+	 *@return the surname, forename, address, date of birth, email
+	 * of the person as a string */
+
 	public String toString()
 	{
 		return "Foreame: " + getForename() + "\nSurname: " + getSurname() + "\nAddress: \n" 

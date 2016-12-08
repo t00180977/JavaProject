@@ -8,211 +8,95 @@ import java.util.*;
 
 public class Flight extends JFrame /*implements ActionListener*/{
 	
-	JMenu FileMenu, MainMenu;
-    int count;
-    
-    //driver
-    public static void main( String[] args ) {
-        Flight frame = new Flight();
-        frame.setVisible(true);
-    }
-
-    private String forename;
-	private String surname;
-	private String address;
-	private String DOB;
-	private String PhoneNo;
-	private String email;
-	private final double insurance = 20;
-	private final double luggage = 20;
-	private ArrayList<String> Destinations = new ArrayList<String>();
-
+	//main gui
+	
+	private String origin;
+	private String destination;
+	private double price;
+	private String departureDate;
+	private String departureTime;
+	private String arrivalDate;
+	private String arrivalTime;
+	
 public Flight(){
-	setForename("unknown");
-	setSurname("unknown");
-	setAddress("unknown");
-	setDOB("unknown");
-	setPhoneNo("unknown");
-	setEmail("unknown");
+	setOrigin("unknown");
+	setDestination("unknown");
+	setPrice(0.0);
+	setDepartureDate("unknown");
+	setDepartureTime("unknown");
+	setArrivalDate("unknown");
+	setArrivalTime("unknown");
 }
 //mutator methods
-	public void setForename(String forename){
-		this.forename = forename;
+	public void setOrigin(String origin){
+		this.origin = origin;
 	}
 	
-	public void setSurname(String Surname){
-		this.surname = surname;
+	public void setDestination(String destination){
+		this.destination = destination;
 	}
 	
-	public void setAddress(String address){
-		this.address = address;
+	public void setPrice(double price){
+		this.price = price;
 	}
 	
-	public void setDOB(String DOB){
-		this.DOB = DOB;
+	public void setDepartureDate(String departureDate){
+		this.departureDate = departureDate;
 	}
 	
-	public void setPhoneNo(String PhoneNo){
-		this.PhoneNo = PhoneNo;
+	public void setDepartureTime(String departureTime){
+		this.departureTime = departureTime;
 	}
 	
-	public void setEmail(String email){
-		this.email = email;
+	public void setArrivalDate(String arrivalDate){
+		this.arrivalDate = arrivalDate;
 	}
 	
-	//accessor methods
-	public String getForename(){
-		return this.forename;
+	public void setArrivalTime(String arrivalTime){
+		this.arrivalTime = arrivalTime;
 	}
 	
-	public String getSurname(){
-		return this.surname;
-	}
-	
-	public String getAddress(){
-		return this.address;
-	}
-	
-	public String getDOB(){
-		return this.DOB;
-	}
-	
-	public String getEmail(){
-		return this.email;
-	}
-	
-	public String toString()
-	{
-		return "Name: " + getForename() + " " + getSurname() + "\nAddress: " 
-			+ getAddress() + "\nDate of birth: " + getDOB() + "\nEmail: " 
-				+ getEmail() + "Insurance: " + insurance + "Luggage: " + luggage;
-	}
-
-}
-
-
-
-
-/*
-public class Flight extends JFrame {
-	public Flight(){
-	JMenu mainMenu, fileMenu;
-	    setTitle("Book a flight");
-		setSize(300,200);
-		setLocation(150,250);
-		
-		
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
-	
-	}
-	//driver
-public static void main(String args[]){
-	Flight frame = new Flight();
-        frame.setVisible(true);
-	}
-	
-	
-	
-	
-/*public class Flight {
-	private String forename, surname, address, DOB, PhoneNo, email;
-	private final double insurance = 20;
-	private final double luggage = 20;
-	
-	public Flight() {
-		setForename("unknown");
-		setSurname("unknown");
-		setAddress("unknown");
-		setDOB("unknown");
-		setPhoneNo("unknown");
-		setEmail("unknown");
-	}
-	
-	
-} 
-}*/
-
-/*import javax.swing.*;
-import java.awt.*;
-
-public class Flight {
-	private String forename;
-	private String surname;
-	private String address;
-	private String DOB;
-	private String PhoneNo;
-	private String email;
-	private final double insurance = 20;
-	private final double luggage = 20;
-
-public Flight(){
-	setForename("unknown");
-	setSurname("unknown");
-	setAddress("unknown");
-	setDOB("unknown");
-	setPhoneNo("unknown");
-	setEmail("unknown");
-}
-//mutator methods
-	public void setForename(String forename){
-		this.forename = forename;
-	}
-	
-	public void setSurname(String Surname){
-		this.surname = surname;
-	}
-	
-	public void setAddress(String address){
-		this.address = address;
-	}
-	
-	public void setDOB(String DOB){
-		this.DOB = DOB;
-	}
-	
-	public void setPhoneNo(String PhoneNo){
-		this.PhoneNo = PhoneNo;
-	}
-	
-	public void setEmail(String email){
-		this.email = email;
-	}
-	
-	//accessor methods
-	public String getForename(){
-		return this.forename;
-	}
-	
-	public String getSurname(){
-		return this.surname;
-	}
-	
-	public String getAddress(){
-		return this.address;
-	}
-	
-	public String getDOB(){
-		return this.DOB;
-	}
-	
-	public String getEmail(){
-		return this.email;
-	}
-	
-	public String toString()
-	{
-		return "Name: " + getForename() + " " + getSurname() + "\nAddress: " 
-			+ getAddress() + "\nDate of birth: " + getDOB() + "\nEmail: " 
-				+ getEmail() + "Insurance: " + insurance + "Luggage: " + luggage;
-	}
-	
-	//driver
-	
-	public class Flight{
-	public static void main(String args[])
-	{
-		//cgh;
+	/*public void setDestinations(ArrayList Destinations){
+		this.Destinations = Destinations;
 	}*/
-	//}
-
-//}
+	
+	//accessor methods
+	public String getOrigin(){
+		return this.origin;
+	}
+	
+	public String getDestination(){
+		return this.destination;
+	}
+	
+	public double getPrice(){
+		return this.price;
+	}
+	
+	public String getDepartureDate(){
+		return this.departureDate;
+	}
+	
+	public String getDepartureTime(){
+		return this.departureTime;
+	}
+	
+	public String getArrivalDate(){
+		return this.arrivalDate;
+	}
+	
+	public String getArrivalTime(){
+		return this.arrivalTime;
+	}
+	
+	/*public ArrayList getDestinations(){
+		return this.Destinations;
+	}*/
+	
+	public String toString()
+	{
+		return "Origin: " + getOrigin() + "\nDestination: " + getDestination() + "\nPrice: " 
+			+ getPrice() + "\nDate of departure: " + getDepartureDate() + "\nDeparture time: " 
+				+ getDepartureTime() + "Arrival date: " + getArrivalDate() + "Arrival time: " + getArrivalTime();
+	}
+}
